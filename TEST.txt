@@ -1,1 +1,18 @@
 Github svn test
+Github svn test : new line of code :=
+
+            try
+            {
+                using (StreamWriter sw = System.IO.File.CreateText(physicalPpath))
+                {
+                    foreach (string msisdn in msisdnList)
+                    {
+                        sw.Write(msisdn);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.ErrorException(string.Format("Nie uda³o siê utworzyæ pliku : {0}",remoteFilename), ex);
+                return false;
+            }
